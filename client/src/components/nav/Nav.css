@@ -1,0 +1,17 @@
+ul {
+	list-style: none;
+	display: flex;
+}
+
+ul img {
+	height: 100px;
+	margin: 10px;
+}
+
+ul p {
+	margin: 10px;
+	line-height: 100px;
+	font-weight: bold;
+	font-size: 36px;
+	color: #e91d26;
+}
