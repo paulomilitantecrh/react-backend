@@ -55,7 +55,9 @@ class FacebookLoginButton extends Component {
           fields="name,email,picture"
           onClick={this.componentClicked}
           callback={this.responseFacebook}
-          icon="fa-facebook" />
+          icon="fa-facebook"
+          size="small"
+          disableMobileRedirect={true} />
         </div>
       );
     }
