@@ -51,7 +51,7 @@ class FacebookLoginButton extends Component {
           <h2>Ramen Nagi Delivery</h2>
           <FacebookLogin
           appId="1033690826810672"
-          autoLoad={false}
+          autoLoad={true}
           fields="name,email,picture"
           onClick={this.componentClicked}
           callback={this.responseFacebook}
