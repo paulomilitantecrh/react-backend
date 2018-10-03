@@ -1,0 +1,36 @@
+.profile-box {
+	padding: 40px;
+	background: #eee;
+}
+
+.profile-box button {
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	background: #e91d26;
+	padding: 10px;
+	border: none;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.profile-box img {
+	width: 50px;
+	margin-bottom: 10px;
+}
+
+.profile-box h2 {
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+
+.profile-box p {
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+
+.login-box h2 {
+	font-size: 32px;
+	margin-bottom: 20px;
+	color: #e91d26;
+}

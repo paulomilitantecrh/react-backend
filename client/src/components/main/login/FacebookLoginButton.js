@@ -37,7 +37,7 @@ class FacebookLoginButton extends Component {
 
     if (this.state.isLoggedIn) {
       fbContent = (
-        <div>
+        <div className="profile-box">
           <img src={this.state.picture} alt={this.state.name} />
           <h2>Welcome {this.state.name}!</h2>
           <p>Email: {this.state.email}</p>
@@ -47,11 +47,11 @@ class FacebookLoginButton extends Component {
     }
     else {
       fbContent = (
-        <div>
+        <div className="login-box">
           <h2>Ramen Nagi Delivery</h2>
           <FacebookLogin
           appId="1033690826810672"
-          autoLoad={true}
+          autoLoad={false}
           fields="name,email,picture"
           onClick={this.componentClicked}
           callback={this.responseFacebook}
