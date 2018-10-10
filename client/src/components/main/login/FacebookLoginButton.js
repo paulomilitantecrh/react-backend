@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FacebookLogin from 'react-facebook-login';
-import { Route, Redirect } from 'react-router';
+import { Redirect } from 'react-router';
 
 class FacebookLoginButton extends Component {
 

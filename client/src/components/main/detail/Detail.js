@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Detail extends Component {
-
-	render() {
-		var list = [
+const Detail = props => {
+	var list = [
 			{
 				id: 1,
 				product_image: '/images/butao.jpg',
@@ -34,26 +32,25 @@ class Detail extends Component {
 			}
 		]
 
-		var itemNumber = this.props.match.params.id;
-		var itemName = list[itemNumber-1].product_name;
-		var itemPrice = list[itemNumber-1].price;
-		var itemDesc = list[itemNumber-1].product_desc;
-		var itemImg = list[itemNumber-1].product_image;
+	var itemNumber = props.match.params.id;
+	var itemName = list[itemNumber-1].product_name;
+	var itemPrice = list[itemNumber-1].price;
+	var itemDesc = list[itemNumber-1].product_desc;
+	var itemImg = list[itemNumber-1].product_image;
 
-		return (
-			<div className="product-detail">
-				<div className="column">
-					<div className="image"><img src={itemImg} alt="" /></div>
-				</div>
-				<div className="column columnEnd">
-					<h2>{itemName}</h2>
-					<p><b>Price:</b> {itemPrice} yen</p>
-					<p><b>Description:</b> {itemDesc}</p>
-					<div className="addToCart"><a>Add to Cart</a></div>
-				</div>
+	return (
+		<div className="product-detail">
+			<div className="column">
+				<div className="image"><img src={itemImg} alt="" /></div>
 			</div>
-		);
-	}
+			<div className="column columnEnd">
+				<h2>{itemName}</h2>
+				<p><b>Price:</b> {itemPrice} yen</p>
+				<p><b>Description:</b> {itemDesc}</p>
+				<div className="addToCart"><a>Add to Cart</a></div>
+			</div>
+		</div>
+	);
 }
 
 export default Detail;

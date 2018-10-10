@@ -1,14 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FacebookLogin from "./FacebookLoginButton";
 import "./Login.css"
 
-class Login extends Component {
-
-  render() {
-    return (
-      <FacebookLogin />
-    );
-  }
-}
+const Login = () => <FacebookLogin />;
 
 export default Login;
