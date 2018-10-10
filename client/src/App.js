@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import './App.css';
 import Nav from './components/nav/Nav';
 import Main from './components/main/Main';
+import Footer from './components/footer/Footer';
+import { BrowserRouter } from 'react-router-dom'
 
 class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Nav />
-        <Main />
-      </div>
+    	<BrowserRouter>
+	      <div className="App">
+	        <Nav />
+	        <Main />
+	        <Footer />
+	      </div>
+      </BrowserRouter>
     );
   }
 }

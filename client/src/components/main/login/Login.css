@@ -1,6 +1,5 @@
 .profile-box {
-	padding: 40px;
-	background: #eee;
+	text-align: left;
 }
 
 .profile-box button {
@@ -12,11 +11,6 @@
 	border: none;
 	text-transform: uppercase;
 	cursor: pointer;
-}
-
-.profile-box img {
-	width: 50px;
-	margin-bottom: 10px;
 }
 
 .profile-box h2 {

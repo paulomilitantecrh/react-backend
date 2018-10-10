@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Nav.css';
 import logo from './logo.png';
+import { Link } from 'react-router-dom'
 
 class Nav extends Component {
 
@@ -15,10 +16,12 @@ class Nav extends Component {
       <nav>
       <ul>
         <li>
+        <Link to="/">
         	<img 
 		        src={this.logo} 
 		        alt={this.alt} 
       		/>
+        </Link>
         </li>
         <li><p>ラーメン凪</p></li>
       </ul>

@@ -1,0 +1,186 @@
+@import 'mixins';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $theme-font;
+}
+
+.App {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	height: 100vh;
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+		height: 80px;
+	}
+
+	.App-header {
+		background-color: #222;
+		height: 150px;
+		padding: 20px;
+		color: white;
+	}
+
+	.App-title {
+		font-size: 1.5em;
+	}
+
+	.App-intro {
+		font-size: large;
+	}
+}
+
+
+@keyframes App-logo-spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+.main {
+	padding: 30px 0;
+	width: 100%;
+}
+
+nav {
+	width: 100%;
+	ul {
+		border-bottom: 1px solid #ddd;
+	}
+}
+
+.container {
+	padding: 0 15px;
+	max-width: 1030px;
+	margin: 0 auto;
+}
+
+.footer {
+	background: $theme-color;
+	bottom: 0;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	font-weight: bold;
+	color: #ffffff;
+	align-self: flex-end;
+	p {
+		margin-bottom: 0;
+		font-size: 12px;
+	}
+}
+
+
+.login-box {
+	margin-bottom: 20px;
+	text-align: center;
+	h2 {
+		margin-bottom: 20px;
+	}
+}
+
+.profile-box {
+	padding: 10px 0;
+	overflow: hidden;
+	border-bottom: 2px solid $theme-color;
+	margin-bottom: 40px;
+	.column {
+		margin-top: 12px;
+		img {
+			width: 20px;
+			border-radius: 50%;
+			margin-right: 10px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		p {
+			margin-bottom: 0;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	button {
+		float: right;
+		cursor: pointer;
+	}
+}
+
+.title1 {
+	font-size: 24px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.shopList {
+	text-align: center;
+	display: flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	a {	
+		color: #000;
+		text-decoration: none;
+		display: block;
+		margin-bottom: 30px;
+		cursor: pointer;
+	}
+	.menuName {
+		font-weight: bold;
+		margin-bottom: 0;
+		color: $theme-color;
+	}
+	.image {
+		margin-bottom: 20px;
+		img {
+			border-radius: 50%;
+			max-width: 100%;
+		}
+	}
+	.column {
+		width: 30%;
+	}
+}
+
+.product-detail {
+	.column {
+		h2 {
+			margin-bottom: 10px;
+		}
+		.image {
+			img {
+				width: 100%;
+			}
+		}
+		.addToCart {
+			margin-top: 20px;
+			a {
+				display: inline-block;
+				background: #000;
+				color: #fff;
+				padding: 10px 20px;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+	.product-detail {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+		.column {
+			display: table-cell;
+			vertical-align: top;
+		}
+		.columnEnd {
+			width: 55%;
+			padding-left: 30px;
+		}
+	}
+
+}
