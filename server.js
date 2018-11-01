@@ -1,7 +1,6 @@
-const express = require('express');
+const app = require('./app');
 const path = require('path');
-
-const app = express();
+const express = require('express');
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
@@ -12,7 +11,4 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
-const port = process.env.PORT || 5000;
-app.listen(port);
-
-console.log(`Password generator listening on ${port}`);
+module.exports = app;

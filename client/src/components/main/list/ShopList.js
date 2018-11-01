@@ -1,48 +1,51 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Redirect } from "react-router";
 
-const ShopList = () => {
+const ShopList = props => {
 
 	var list = [
 		{
 			id: 1,
-			product_image: '/images/butao.jpg',
-			product_name: 'Butao King',
+			product_image: "/images/butao.jpg",
+			product_name: "Butao King",
 			price : 550
 		},
 		{
 			id: 2,
-			product_url: '',
-			product_image: '/images/black.jpg',
-			product_name: 'Black King',
+			product_url: "",
+			product_image: "/images/black.jpg",
+			product_name: "Black King",
 			price: 600
 		},
 		{
 			id: 3,
-			product_url: '',
-			product_image: '/images/green.jpg',
-			product_name: 'Green King',
+			product_url: "",
+			product_image: "/images/green.jpg",
+			product_name: "Green King",
 			price: 550
 		},
 		{
 			id: 4,
-			product_url: '',
-			product_image: '/images/gyoza.jpg',
-			product_name: 'Gyoza',
+			product_url: "",
+			product_image: "/images/gyoza.jpg",
+			product_name: "Gyoza",
 			price: 150
 		}
-	]
+	];
 
 	var menuList = list.map((i) => ( 
-			<div className="column" key={i.id.toString()}>
-				<Link to={"/list/" + i.id} className="product" data-id={i.id.toString()}>
-					<div className="image"><img src={i.product_image} alt="" /></div>
-					<p className="menuName">{i.product_name}</p>
-					<p>{i.price} yen</p>
-				</Link>
-			</div>
-		)
+		<div className="column" key={i.id.toString()}>
+			<Link to={"/list/" + i.id} className="product" data-id={i.id.toString()}>
+				<div className="image"><img src={i.product_image} alt="" /></div>
+				<p className="menuName">{i.product_name}</p>
+				<p>{i.price} yen</p>
+			</Link>
+		</div>
+	)
 	);
+
+	console.log(props.loggedIn);
 
 	return (
 		<div>
@@ -53,6 +56,6 @@ const ShopList = () => {
 		</div>
 	);
 
-}
+};
 
 export default ShopList;
