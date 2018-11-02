@@ -39,8 +39,16 @@ const Detail = props => {
 	var itemDesc = list[itemNumber-1].product_desc;
 	var itemImg = list[itemNumber-1].product_image;
 
+
+	let redirect, loggedIn = props.loggedIn;
+	
+	if (!loggedIn) {
+		redirect = <Redirect to="/" />;
+	}
+
 	return (
 		<div className="product-detail">
+			{redirect}
 			<div className="column">
 				<div className="image"><img src={itemImg} alt="" /></div>
 			</div>

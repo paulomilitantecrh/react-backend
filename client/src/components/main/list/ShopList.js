@@ -45,10 +45,15 @@ const ShopList = props => {
 	)
 	);
 
-	console.log(props.loggedIn);
+	let redirect, loggedIn = props.loggedIn;
+	
+	if (!loggedIn) {
+		redirect = <Redirect to="/" />;
+	}
 
 	return (
 		<div>
+			{redirect}
 			<h2 className="title1">Our Menu</h2>
 			<div className="shopList">
 				{menuList}

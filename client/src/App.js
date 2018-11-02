@@ -16,6 +16,15 @@ class App extends Component {
 		};
 	}
 
+	componentWillMount = () => {
+		let session = sessionStorage.getItem("id");
+		if (session) {
+			this.setState({
+				loggedIn: true,
+			});
+		}
+	}
+
 	componentDidMount = () => {
 		let session = sessionStorage.getItem("id");
 		if (session) {
@@ -54,6 +63,7 @@ class App extends Component {
 			.then(users => {
 				sessionStorage.setItem("id", users[0].userID);
 				this.logIn(users);
+				window.location.href = "/list";
 			});
 	}
 

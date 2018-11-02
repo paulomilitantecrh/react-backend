@@ -11,7 +11,6 @@ class FacebookLoginButton extends Component {
 	  		appId="1033690826810672"
 	  		autoLoad={false}
 	  		fields="name,email,picture"
-	  		onClick={this.componentClicked}
 	  		callback={this.props.responseFacebook}
 	  		icon="fa-facebook"
 	  		size="small"

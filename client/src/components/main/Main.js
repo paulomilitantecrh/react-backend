@@ -13,7 +13,7 @@ const Main = props => {
 	let name = props.name;
 	let email = props.email;
 	let picture = props.picture;
-
+	
 	return(<div className="main">
 		<div className="container main-content">
 			<Route exact path="/"
@@ -27,7 +27,9 @@ const Main = props => {
 			<Route exact path="/list"
 				render={(props) => <ShopList 
 					loggedIn={loggedIn}/>} />
-			<Route path ="/list/:id" component={Detail} />
+			<Route path ="/list/:id" 
+				render={({match}) => <Detail 
+					loggedIn={loggedIn} match={match}/>} />
 		</div>
 	</div>);
 };
